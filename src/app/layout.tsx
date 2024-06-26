@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/footer";
 import { Victor_Mono } from "next/font/google";
 import "./globals.scss";
+import Nav from "@/components/nav/nav";
 
 const victorMono = Victor_Mono({
   subsets: ["latin"],
@@ -22,8 +23,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={victorMono.className}>
         <div className="main">
-          <div>Hi me</div>
-          {children}
+          <Nav />
+          <main>{children}</main>
           <Footer />
         </div>
       </body>

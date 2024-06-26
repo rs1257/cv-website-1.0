@@ -1,12 +1,12 @@
 @use "../../app/colours.scss" as c;
 
 .footer {
-  background: #faf9f6;
+  background: c.$white;
   color: c.$darkBlue;
-  padding: 25px;
+  padding: 25px 60px;
   display: flex;
   justify-content: space-between;
-  box-shadow: black 2px 2px 2px 2px;
+  box-shadow: black 1px 1px 1px 1px;
 
   .iconContainer {
     display: flex;
