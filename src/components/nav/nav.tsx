@@ -4,6 +4,7 @@ import {
   faDownload,
   faClipboardList,
   faCode,
+  faMapLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./nav.module.scss";
@@ -20,6 +21,10 @@ const links = [
   {
     name: "Skills",
     icon: <FontAwesomeIcon icon={faClipboardList} className={styles.icon} />,
+  },
+  {
+    name: "Experience",
+    icon: <FontAwesomeIcon icon={faMapLocationDot} className={styles.icon} />,
   },
   {
     name: "Github",
