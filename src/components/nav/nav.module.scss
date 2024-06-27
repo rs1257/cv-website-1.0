@@ -12,8 +12,15 @@
     font-weight: 700;
     cursor: pointer;
 
-    &:hover {
-      color: c.$pink;
+    a {
+      color: c.$babyBlue;
+      text-underline-offset: 2px;
+      text-decoration: none;
+
+      &:hover {
+        color: c.$pink;
+        text-decoration: underline;
+      }
     }
 
     .icon {

@@ -1,7 +1,10 @@
 import Footer from "@/components/footer/footer";
-import { Victor_Mono } from "next/font/google";
 import "./globals.scss";
 import Nav from "@/components/nav/nav";
+import { ThemeProvider } from "@mui/material/styles";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import theme from "./theme";
+import { Victor_Mono } from "next/font/google";
 
 const victorMono = Victor_Mono({
   subsets: ["latin"],
@@ -22,11 +25,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={victorMono.className}>
-        <div className="main">
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </div>
+        <AppRouterCacheProvider>
+          <ThemeProvider theme={theme}>
+            <div className="main">
+              <Nav />
+              <main>{children}</main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
