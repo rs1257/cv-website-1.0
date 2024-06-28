@@ -3,7 +3,7 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./footer.module.scss";
-import { CV, GITHUB, LINKEDIN } from "@/app/globals";
+import { CV, GITHUB, LINKEDIN } from "@/config/globals";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

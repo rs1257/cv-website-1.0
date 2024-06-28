@@ -7,7 +7,7 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 import styles from "./timeline.module.scss";
 import Chip from "@mui/material/Chip";
-import { EXPERIENCE } from "@/app/globals";
+import { EXPERIENCE } from "@/config/globals";
 
 export default function OutlinedTimeline() {
   const data = [

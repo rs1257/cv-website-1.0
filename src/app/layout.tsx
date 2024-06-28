@@ -3,7 +3,7 @@ import "./globals.scss";
 import Nav from "@/components/nav/nav";
 import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import theme from "./theme";
+import theme from "../config/theme";
 import { Victor_Mono } from "next/font/google";
 
 const victorMono = Victor_Mono({
