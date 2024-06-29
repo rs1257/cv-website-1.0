@@ -64,6 +64,7 @@ export default function OutlinedTimeline() {
                       {tags.map((tag) => {
                         return (
                           <Chip
+                            key={tag}
                             label={tag}
                             size="small"
                             color="info"
