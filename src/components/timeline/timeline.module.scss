@@ -21,13 +21,27 @@
       font-size: 12px;
       opacity: 0.8;
     }
+
+    .tags {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+    }
   }
 
   .right {
     float: right;
+
+    .tags {
+      justify-content: end;
+    }
   }
 
   .left {
     float: left;
+
+    .tags {
+      justify-content: start;
+    }
   }
 }

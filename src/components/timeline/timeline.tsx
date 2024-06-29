@@ -12,47 +12,9 @@ import Section from "../section/section";
 import { babyBlue, lightBlue } from "@/config/colours";
 import { useState } from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
+import { timeline } from "@/config/timeline";
 
 export default function OutlinedTimeline() {
-  const data = [
-    {
-      startDate: "Feb 2014",
-      endDate: "July 2019",
-      name: "Student - University of York",
-      body: "MEng Computer Science with a year in industry (1st)",
-    },
-    {
-      startDate: "July 2016",
-      endDate: "July 2017",
-      name: "Software Engineer Intern - Sophos",
-      body: "",
-    },
-    {
-      startDate: "July 2018",
-      endDate: "August 2018",
-      name: "Cyber Security Intern - University of York",
-      body: "",
-    },
-    {
-      startDate: "August 2019",
-      endDate: "May 2022",
-      name: "Software Engineer - BJSS",
-      body: "regeergrehg wge  wrhgrh wrg ",
-    },
-    {
-      startDate: "May 2022",
-      endDate: "Dec 2023",
-      name: "Senior Consultant - Capgemini Invent",
-      body: "",
-    },
-    {
-      startDate: "Jan 2024",
-      endDate: "Present",
-      name: "Managing Consultant - Capgemini Invent",
-      body: "",
-    },
-  ];
-
   const [selected, setSelected] = useState<number>(0);
 
   return (
@@ -63,7 +25,7 @@ export default function OutlinedTimeline() {
     >
       <LazyMotion features={domAnimation} strict>
         <Timeline position="alternate-reverse" className={styles.timeline}>
-          {data.map(({ name, startDate, endDate, body }, index) => {
+          {timeline.map(({ name, startDate, endDate, body, tags }, index) => {
             return (
               <TimelineItem key={name}>
                 <TimelineSeparator>
@@ -76,7 +38,7 @@ export default function OutlinedTimeline() {
                       height: "10px",
                     }}
                   />
-                  {data.length - 1 !== index && (
+                  {timeline.length - 1 !== index && (
                     <TimelineConnector
                       sx={{
                         backgroundColor: lightBlue,
@@ -98,13 +60,18 @@ export default function OutlinedTimeline() {
                     <span className={styles.dateRange}>
                       {startDate} - {endDate}
                     </span>
-                    <div>
-                      <Chip
-                        label="Small"
-                        size="small"
-                        color="info"
-                        sx={{ background: "red" }}
-                      />
+                    <div className={styles.tags}>
+                      {tags.map((tag) => {
+                        return (
+                          <Chip
+                            label={tag}
+                            size="small"
+                            color="info"
+                            sx={{ background: babyBlue }}
+                            className={styles.chip}
+                          />
+                        );
+                      })}
                     </div>
                     <div>{body}</div>
                   </m.div>
