@@ -1,0 +1,6 @@
+@use "../../config/colours.scss" as c;
+
+.header {
+  color: c.$babyBlue;
+  text-align: center;
+}

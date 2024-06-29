@@ -1,0 +1,6 @@
+@use "../../config/colours.scss" as c;
+
+.description {
+  color: c.$babyBlue;
+  text-align: center;
+}

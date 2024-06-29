@@ -3,6 +3,7 @@ import Avatar from "@mui/material/Avatar";
 import Typed from "typed.js";
 import styles from "./background.module.scss";
 import { useEffect, useRef } from "react";
+import Section from "../section/section";
 
 export default function Background() {
   const typewriterElement = useRef(null);
@@ -27,17 +28,20 @@ export default function Background() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Avatar
-        alt="Ryan Smith"
-        src="/headshot.webp"
-        sx={{ width: 200, height: 200 }}
-        className={styles.avatar}
-      />
-      <div>
-        <h1 className={styles.title}>Ryan Smith</h1>
-        <span className={styles.typewriter} ref={typewriterElement}></span>
+    <Section>
+      <div className={styles.container}>
+        <Avatar
+          alt="Ryan Smith"
+          src="/headshot.webp"
+          sx={{ width: 200, height: 200 }}
+          className={styles.avatar}
+        />
+        <div>
+          <h1 className={styles.title}>Ryan Smith</h1>
+          <span className={styles.typewriter} ref={typewriterElement} />
+          <p>lsknsfl sflbnsfl slfb sfl bslf b</p>
+        </div>
       </div>
-    </div>
+    </Section>
   );
 }

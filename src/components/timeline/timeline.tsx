@@ -4,10 +4,11 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-
 import styles from "./timeline.module.scss";
 import Chip from "@mui/material/Chip";
 import { EXPERIENCE } from "@/config/globals";
+import Section from "../section/section";
+import { babyBlue, lightBlue } from "@/config/colours";
 
 export default function OutlinedTimeline() {
   const data = [
@@ -50,8 +51,11 @@ export default function OutlinedTimeline() {
   ];
 
   return (
-    <>
-      <h1 id={EXPERIENCE}>Experience</h1>
+    <Section
+      id={EXPERIENCE}
+      header="Experience"
+      text="My software engineer journey"
+    >
       <Timeline position="alternate-reverse" className={styles.timeline}>
         {data.map(({ name, startDate, endDate, body }, index) => {
           return (
@@ -59,9 +63,11 @@ export default function OutlinedTimeline() {
               <TimelineSeparator>
                 <TimelineDot
                   variant="outlined"
-                  sx={{ borderColor: "purple" }}
+                  sx={{ borderColor: babyBlue }}
                 />
-                {data.length - 1 !== index && <TimelineConnector />}
+                {data.length - 1 !== index && (
+                  <TimelineConnector sx={{ backgroundColor: lightBlue }} />
+                )}
               </TimelineSeparator>
               <TimelineContent>
                 <div
@@ -88,6 +94,6 @@ export default function OutlinedTimeline() {
           );
         })}
       </Timeline>
-    </>
+    </Section>
   );
 }

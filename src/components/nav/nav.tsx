@@ -1,13 +1,16 @@
+"use client";
 import { getNavLinks } from "@/config/navlinks";
 import styles from "./nav.module.scss";
+import { motion } from "framer-motion";
 
 export default function Nav() {
   return (
     <nav className={styles.nav}>
       {getNavLinks(styles).map(({ name, icon, link, external, download }) => (
         <div key={name} className={styles.navItem}>
-          <a
-            href={link}
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            href={external || download ? link : `#${link}`}
             {...(external
               ? { target: "_blank", rel: "noopener noreferrer" }
               : {})}
@@ -15,7 +18,7 @@ export default function Nav() {
           >
             {icon}
             <span>{name}</span>
-          </a>
+          </motion.a>
         </div>
       ))}
     </nav>

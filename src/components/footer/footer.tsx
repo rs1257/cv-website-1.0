@@ -1,9 +1,13 @@
+"use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./footer.module.scss";
 import { CV, GITHUB, LINKEDIN } from "@/config/globals";
+import { motion } from "framer-motion";
+
+const onHoverScale = 1.2;
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,15 +19,25 @@ export default function Footer() {
         <div>&copy; {currentYear} All rights reserved.</div>
       </div>
       <div className={styles.iconContainer}>
-        <a href={CV} download>
+        <motion.a whileHover={{ scale: onHoverScale }} href={CV} download>
           <FontAwesomeIcon icon={faDownload} className={styles.icon} />
-        </a>
-        <a href={GITHUB} target="_blank" rel="noopener noreferrer">
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: onHoverScale }}
+          href={GITHUB}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-        </a>
-        <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
+        </motion.a>
+        <motion.a
+          whileHover={{ scale: onHoverScale }}
+          href={LINKEDIN}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
-        </a>
+        </motion.a>
       </div>
     </footer>
   );
