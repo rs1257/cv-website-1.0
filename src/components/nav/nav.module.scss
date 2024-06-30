@@ -2,30 +2,61 @@
 
 .nav {
   display: flex;
-  justify-content: space-evenly;
-  padding: 30px;
-  color: c.$babyBlue;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: c.$darkBlue;
 
-  .navItem {
-    font-weight: 700;
-    cursor: pointer;
+  .progress {
+    height: 5px;
+    width: 100%;
+    background-color: c.$babyBlue;
+    transform-origin: 0%;
+    z-index: 1001;
+  }
 
-    a {
-      display: flex;
-      align-items: center;
-      color: c.$babyBlue;
-      text-underline-offset: 2px;
-      text-decoration: none;
+  .progressBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: c.$midBlue;
+    opacity: 0.3;
+    height: 5px;
+    z-index: 999;
+  }
 
-      &:hover {
-        color: c.$pink;
-        text-decoration: underline;
+  .navLinks {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+    color: c.$babyBlue;
+
+    .navItem {
+      font-weight: 700;
+      cursor: pointer;
+
+      a {
+        display: flex;
+        align-items: center;
+        color: c.$babyBlue;
+        text-underline-offset: 2px;
+        text-decoration: none;
+
+        &:hover {
+          color: c.$pink;
+          text-decoration: underline;
+        }
       }
-    }
 
-    .icon {
-      height: 25px;
-      padding-right: 10px;
+      .icon {
+        height: 25px;
+        padding-right: 10px;
+      }
     }
   }
 }

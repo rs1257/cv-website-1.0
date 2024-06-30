@@ -1,9 +1,9 @@
 "use client";
-import Avatar from "@mui/material/Avatar";
 import Typed from "typed.js";
 import styles from "./background.module.scss";
 import { useEffect, useRef } from "react";
 import Section from "../section/section";
+import Image from "next/image";
 
 export default function Background() {
   const typewriterElement = useRef(null);
@@ -30,11 +30,12 @@ export default function Background() {
   return (
     <Section>
       <div className={styles.container}>
-        <Avatar
-          alt="Ryan Smith"
+        <Image
           src="/headshot.webp"
-          sx={{ width: 200, height: 200 }}
+          alt="Ryan Smith"
           className={styles.avatar}
+          width={200}
+          height={200}
         />
         <div>
           <h1 className={styles.title}>Ryan Smith</h1>
