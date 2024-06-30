@@ -112,12 +112,3 @@ const projects = [
     url: "https://github.com/rs1257/arbitrage-warrior",
   },
 ];
-
-// none images
-// https://github.com/rs1257/azure-function-wrapper
-// https://github.com/rs1257/secure-courier-application/tree/main
-// https://github.com/rs1257/dos-simulation
-// https://github.com/rs1257/battery-notification
-// https://github.com/rs1257/flutter-fitness-app-moor-v2/tree/master
-// https://github.com/rs1257/flutter-fitness-app-moor-v1/tree/master
-// https://github.com/rs1257/durable-functions

@@ -30,13 +30,16 @@ export default function Background() {
   return (
     <Section>
       <div className={styles.container}>
-        <Image
-          src="/headshot.webp"
-          alt="Ryan Smith"
-          className={styles.avatar}
-          width={200}
-          height={200}
-        />
+        <div className={styles.avatarContainer}>
+          <Image
+            src="/headshot.webp"
+            alt="Ryan Smith"
+            className={styles.avatar}
+            width={200}
+            height={200}
+          />
+          <div className={styles.overlay} />
+        </div>
         <div>
           <h1 className={styles.title}>Ryan Smith</h1>
           <span className={styles.typewriter} ref={typewriterElement} />

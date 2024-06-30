@@ -6,9 +6,27 @@
   gap: 30px;
   color: c.$babyBlue;
 
-  .avatar {
-    border: c.$babyBlue 4px solid;
+  .avatarContainer {
+    position: relative;
     border-radius: 50%;
+
+    .avatar {
+      border: c.$babyBlue 4px solid;
+      border-radius: 50%;
+      background: red;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: c.$midBlue;
+      z-index: 22;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0.1;
+    }
   }
 
   .typewriter {
