@@ -4,3 +4,10 @@
   color: c.$babyBlue;
   text-align: center;
 }
+
+.hiddenAnchor {
+  display: block;
+  position: relative;
+  top: -85px;
+  visibility: hidden;
+}

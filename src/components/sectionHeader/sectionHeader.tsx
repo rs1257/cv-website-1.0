@@ -7,8 +7,9 @@ interface SectionHeaderProps {
 
 export default function SectionHeader({ id, header }: SectionHeaderProps) {
   return (
-    <h1 className={styles.header} id={id}>
-      {header}
-    </h1>
+    <>
+      <span className={styles.hiddenAnchor} id={id} />
+      <h1 className={styles.header}>{header}</h1>
+    </>
   );
 }
