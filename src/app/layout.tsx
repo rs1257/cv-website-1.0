@@ -5,6 +5,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import theme from "../config/theme";
 import { Victor_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const victorMono = Victor_Mono({
   subsets: ["latin"],
@@ -29,6 +31,8 @@ export default function RootLayout({
             </div>
           </ThemeProvider>
         </AppRouterCacheProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
