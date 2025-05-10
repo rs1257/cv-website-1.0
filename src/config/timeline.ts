@@ -24,7 +24,7 @@ export const timeline = [
     startDate: "August 2019",
     endDate: "May 2022",
     name: "Software Engineer - BJSS",
-    body: "regeergrehg wge  wrhgrh wrg ",
+    body: "",
     tags: ["PHP", "Azure", "Python", "TypeScript"],
   },
   {
@@ -32,13 +32,13 @@ export const timeline = [
     endDate: "Dec 2023",
     name: "Senior Consultant - Capgemini Invent",
     body: "",
-    tags: ["TypeScript", "Sass", "Azure"],
+    tags: ["TypeScript", "Sass", "Azure", "React"],
   },
   {
     startDate: "Jan 2024",
     endDate: "Present",
     name: "Managing Consultant - Capgemini Invent",
     body: "",
-    tags: ["Python", "AWS", "Terraform"],
+    tags: ["Python", "AWS", "Terraform", "Databricks", "Kafka"],
   },
 ];

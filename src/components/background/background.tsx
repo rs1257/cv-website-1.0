@@ -40,10 +40,9 @@ export default function Background() {
           />
           <div className={styles.overlay} />
         </div>
-        <div>
+        <div className={styles.avatarTextContainer}>
           <h1 className={styles.title}>Ryan Smith</h1>
-          <span className={styles.typewriter} ref={typewriterElement} />
-          <p>lsknsfl sflbnsfl slfb sfl bslf b</p>
+          <div><span className={styles.typewriter} ref={typewriterElement} /></div>
         </div>
       </div>
     </Section>

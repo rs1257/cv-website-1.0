@@ -6,7 +6,7 @@ interface SectionProps {
   id?: string;
   header?: string;
   text?: string;
-  children: JSX.Element;
+  children: React.JSX.Element;
 }
 
 export default function Section({ id, header, children, text }: SectionProps) {

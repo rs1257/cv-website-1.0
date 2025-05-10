@@ -68,7 +68,7 @@ const projects = [
     image: "/simulation.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["Python", "Pygame"],
     url: "https://github.com/rs1257/particle-simulation",
   },
   {
@@ -76,7 +76,7 @@ const projects = [
     image: "/snake-game.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["Python", "Pygame"],
     url: "https://github.com/rs1257/snake-game",
   },
   {
@@ -84,7 +84,7 @@ const projects = [
     image: "/pong-game.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["Python", "Pygame"],
     url: "https://github.com/rs1257/pong-game",
   },
   {
@@ -92,7 +92,7 @@ const projects = [
     image: "/task-allocation.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["Python", "Deap"],
     url: "https://github.com/rs1257/metaheuristics-noc-task-mapping",
   },
   {
@@ -100,7 +100,7 @@ const projects = [
     image: "/mh-world.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["Java", "Android"],
     url: "https://github.com/rs1257/mhw-database",
   },
   {
@@ -108,7 +108,7 @@ const projects = [
     image: "/arbitrage-warrior.png",
     alt: "",
     description: "",
-    tags: ["Python"],
+    tags: ["JavaScript", "Electron", "CSS"],
     url: "https://github.com/rs1257/arbitrage-warrior",
   },
 ];
