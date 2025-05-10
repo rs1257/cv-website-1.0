@@ -26,7 +26,7 @@ export default function Nav() {
                     : {})}
                   {...(download ? { download: true } : {})}
                 >
-                  {icon}
+                  <span>{icon}</span>
                   <span>{name}</span>
                 </m.a>
               </div>

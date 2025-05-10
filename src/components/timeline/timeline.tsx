@@ -13,9 +13,13 @@ import { babyBlue, lightBlue } from "@/config/colours";
 import { useState } from "react";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 import { timeline } from "@/config/timeline";
+import useBreakpoint from 'use-breakpoint'
+
+const BREAKPOINTS = { mobile: 0, desktop: 800 }
 
 export default function OutlinedTimeline() {
   const [selected, setSelected] = useState<number>(0);
+  const { breakpoint } = useBreakpoint(BREAKPOINTS, "desktop")
 
   return (
     <Section
@@ -24,10 +28,10 @@ export default function OutlinedTimeline() {
       text="My software engineer journey"
     >
       <LazyMotion features={domAnimation} strict>
-        <Timeline position="alternate-reverse" className={styles.timeline}>
+        <Timeline position={breakpoint === "desktop" ? "alternate-reverse" : "right"} className={styles.timeline}>
           {timeline.map(({ name, startDate, endDate, body, tags }, index) => {
             return (
-              <TimelineItem key={name}>
+              <TimelineItem key={name} className={styles.item}>
                 <TimelineSeparator>
                   <TimelineDot
                     variant={selected === index ? "filled" : "outlined"}

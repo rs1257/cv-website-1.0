@@ -60,3 +60,15 @@
     }
   }
 }
+
+@media (width <= 800px) {
+  .icon {
+    display: none;
+  }
+}
+
+@media (width <= 600px) {
+  .nav {
+    display: none;
+  }
+}
